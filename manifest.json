@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Fetch Fiddler",
+  "version": "1.0",
+  "permissions": [
+    "webRequest"
+  ],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "resources": ["modifyFetch.js"]
+    }
+  ]
+}
